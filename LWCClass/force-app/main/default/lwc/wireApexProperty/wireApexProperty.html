@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Wire Apex Property">
+        <lightning-input type="date" name="birthDate" label="Enter Birth Date" value={minBirthDate} onchange={handleOnChange}></lightning-input>
+        <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

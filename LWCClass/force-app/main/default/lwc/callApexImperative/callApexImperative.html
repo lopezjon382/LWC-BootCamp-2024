@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Call Apex Imperatively">
+        <lightning-input type="date" name="birthDate" label="Enter Birth Date" value={minBirthDate} onchange={handleOnChange}></lightning-input>
+        <lightning-button label="Get contacts" onclick={handleButtonClick}></lightning-button>
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
